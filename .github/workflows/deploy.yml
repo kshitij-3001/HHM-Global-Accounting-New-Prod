@@ -34,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular
-        run: npm run build -- --configuration production,github-pages --base-href /HHM-Global-Accounting-New-Prod/
+        run: npm run build -- --configuration=github-pages --base-href=/HHM-Global-Accounting-New-Prod/
 
       - name: Create 404 fallback
         run: cp dist/HHM_Global_Accounting/browser/index.html dist/HHM_Global_Accounting/browser/404.html

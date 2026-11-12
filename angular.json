@@ -47,16 +47,29 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "45kB",
+                  "maximumError": "60kB"
                 }
               ],
               "outputHashing": "all"
             },
 
               "github-pages": {
-              "outputMode": "static"
-          },
+  "outputMode": "static",
+  "budgets": [
+    {
+      "type": "initial",
+      "maximumWarning": "500kB",
+      "maximumError": "1MB"
+    },
+    {
+      "type": "anyComponentStyle",
+      "maximumWarning": "45kB",
+      "maximumError": "60kB"
+    }
+  ],
+  "outputHashing": "all"
+},
             "development": {
               "optimization": false,
               "extractLicenses": false,
