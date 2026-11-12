@@ -1,0 +1,200 @@
+<main class="faq-page" id="faq-top">
+
+  <!-- PAGE HEADER -->
+  <section class="faq-header">
+    <div class="faq-shell">
+
+      <div class="faq-breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>FAQ</span>
+      </div>
+
+      <div class="faq-header-content">
+        <div>
+          <p class="faq-eyebrow">HELP &amp; INFORMATION</p>
+          <h1>Frequently Asked <span>Questions.</span></h1>
+        </div>
+
+        <p class="faq-header-description">
+          Find answers about HHM's services, engagement options
+          and how to get started. Can't find what you're looking for?
+          Contact our team.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ CONTENT -->
+  <section class="faq-content-section">
+    <div class="faq-shell faq-layout">
+
+      <!-- LEFT CATEGORY NAVIGATION -->
+      <aside class="faq-sidebar">
+
+        <p class="faq-sidebar-label">BROWSE BY TOPIC</p>
+
+        <nav class="faq-category-nav" aria-label="FAQ categories">
+
+          @for (section of faqSections; track section.id) {
+          <a [href]="'/faq#' + section.id" class="faq-category-link">
+            <span class="faq-category-number">
+              {{ section.number }}
+            </span>
+
+            <span>{{ section.title }}</span>
+
+            <span class="faq-category-arrow" aria-hidden="true">
+              ↗
+            </span>
+          </a>
+          }
+
+        </nav>
+
+        <div class="faq-sidebar-help">
+          <span class="faq-help-icon">?</span>
+
+          <h3>Still have a question?</h3>
+
+          <p>
+            Our team can help you understand the available
+            services and support options.
+          </p>
+
+          <a href="/contact">
+            Contact HHM <span>↗</span>
+          </a>
+        </div>
+
+      </aside>
+
+
+      <!-- RIGHT FAQ ACCORDIONS -->
+      <div class="faq-main-content">
+
+        <div class="faq-results-heading">
+          <p>
+            <span class="faq-results-dot"></span>
+            ANSWERS TO COMMON QUESTIONS
+          </p>
+
+          <span>{{ faqSections.length }} TOPICS</span>
+        </div>
+
+
+        @for (section of faqSections; track section.id) {
+
+        <section class="faq-category-section" [id]="section.id">
+
+          <div class="faq-category-heading">
+            <span class="faq-section-number">
+              {{ section.number }}
+            </span>
+
+            <div>
+              <h2>{{ section.title }}</h2>
+              <p>{{ section.description }}</p>
+            </div>
+          </div>
+
+
+          <div class="faq-accordion-list">
+
+            @for (item of section.items; track item.question; let i = $index) {
+
+            <details class="faq-accordion">
+
+              <summary>
+                <span class="faq-question-number">
+                  {{ (i + 1).toString().padStart(2, '0') }}
+                </span>
+
+                <span class="faq-question">
+                  {{ item.question }}
+                </span>
+
+                <span class="faq-accordion-icon" aria-hidden="true">
+                  +
+                </span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>{{ item.answer }}</p>
+              </div>
+
+            </details>
+
+            }
+
+          </div>
+
+        </section>
+
+        }
+
+        <div class="faq-bottom-note">
+          <span>?</span>
+          <p>
+            The information on this page is general. Specific services,
+            responsibilities and engagement terms are confirmed
+            based on your requirements.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT CTA -->
+  <section class="faq-contact-section">
+    <div class="faq-shell">
+
+      <div class="faq-contact-panel">
+
+        <div class="faq-contact-copy">
+          <p class="faq-eyebrow">HAVE A QUESTION WE HAVEN'T COVERED?</p>
+
+          <h2>
+            Let's find the<br>
+            <span>right answer together.</span>
+          </h2>
+
+          <p>
+            Tell us what you'd like to know about accounting,
+            bookkeeping, payroll, tax or working with HHM.
+          </p>
+
+          <a href="/contact" class="faq-contact-button">
+            Get in touch
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="faq-contact-details">
+          <span>EMAIL OUR TEAM</span>
+
+          <a href="mailto:info@hhmconsultancyservices.com">
+            info@hhmconsultancyservices.com
+          </a>
+
+          <a href="/faq#faq-top" class="faq-back-top">
+            Back to top ↑
+          </a>
+        </div>
+
+      </div>
+
+      <div class="faq-footer-line">
+        <span>HHM GLOBAL ACCOUNTING</span>
+        <span>HELP · INFORMATION · SUPPORT</span>
+      </div>
+
+    </div>
+  </section>
+
+</main>

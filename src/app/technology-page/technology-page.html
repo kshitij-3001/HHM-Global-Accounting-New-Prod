@@ -1,0 +1,673 @@
+<main class="technology-page">
+
+  <!-- =====================================
+       HERO - TECHNOLOGY SHOWCASE
+  ====================================== -->
+  <section class="tech-hero">
+
+    <div class="tech-grid-background"></div>
+    <div class="tech-glow tech-glow-one"></div>
+    <div class="tech-glow tech-glow-two"></div>
+
+    <div class="tech-container tech-hero-layout">
+
+      <!-- LEFT: HERO CONTENT -->
+      <div class="tech-hero-content scroll-reveal">
+
+        <div class="tech-eyebrow">
+          <span class="eyebrow-indicator"></span>
+          TECHNOLOGY ENABLED
+        </div>
+
+        <h1>
+          Your Systems.
+          <span>Our Expertise.</span>
+        </h1>
+
+        <p>
+          We work with the accounting and business tools your team already
+          relies on, helping you maintain efficient and connected workflows.
+        </p>
+
+        <div class="tech-hero-actions">
+
+          <a href="#platforms" class="tech-hero-button" (click)="scrollToSection($event, 'platforms')">
+            View Our Technology
+            <span>→</span>
+          </a>
+
+        </div>
+
+        <div class="hero-caption">
+          <span class="caption-pulse"></span>
+          Working with your existing business ecosystem
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT: PLATFORM INTERFACE -->
+      <div class="tech-showcase scroll-reveal">
+
+        <div class="showcase-topline">
+          <span class="showcase-live">
+            <span></span>
+            PLATFORM ECOSYSTEM
+          </span>
+
+          <span class="showcase-index">HHM / 01</span>
+        </div>
+
+
+        <div class="platform-matrix">
+
+          @for (platform of mainPlatforms; track platform.name; let i = $index) {
+          <article [class]="'platform-tile tone-' + platform.tone" [style.--tile-index]="i">
+
+            <span class="platform-initials">
+              {{ platform.initials }}
+            </span>
+
+            <span class="platform-category">
+              {{ platform.category }}
+            </span>
+
+            <span class="platform-name">
+              {{ platform.name }}
+            </span>
+
+            <span class="tile-corner"></span>
+
+          </article>
+          }
+
+        </div>
+
+
+        <!-- ADDITIONAL PLATFORMS -->
+        <div class="additional-platforms-panel">
+
+          <div class="additional-header">
+            <span class="additional-title">
+              <span class="additional-dot"></span>
+              MORE PLATFORMS
+            </span>
+
+            <span class="additional-subtitle">
+              Other tools for connected workflows
+            </span>
+          </div>
+
+          <div class="additional-platform-list">
+
+            @for (platform of additionalPlatforms; track platform) {
+            <span class="additional-platform-chip">
+              {{ platform }}
+            </span>
+            }
+
+          </div>
+
+        </div>
+
+
+        <div class="showcase-footer">
+          <span>ACCOUNTING · PAYROLL · PROPERTY · BUSINESS TOOLS</span>
+          <span class="showcase-footer-mark">HHM</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- HERO BOTTOM DECORATION -->
+    <div class="hero-system-line">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       PLATFORM ECOSYSTEM
+  ====================================== -->
+  <section class="platforms-section section-space" id="platforms">
+
+    <div class="tech-container">
+
+      <div class="tech-section-heading split-tech-heading scroll-reveal">
+
+        <div>
+          <span class="tech-section-eyebrow">
+            <span></span>
+            YOUR BUSINESS ECOSYSTEM
+          </span>
+
+          <h2>
+            The tools you use.
+            <span>The workflows we support.</span>
+          </h2>
+        </div>
+
+        <p>
+          Every business has its own technology environment. We work with
+          relevant accounting, property management, payroll, and business
+          platforms according to the requirements of each engagement.
+        </p>
+
+      </div>
+
+
+      <div class="technology-category-grid">
+
+        @for (category of technologyCategories; track category.number) {
+        <article class="technology-category-card scroll-reveal">
+
+          <div class="category-card-top">
+
+            <span class="category-number">
+              {{ category.number }}
+            </span>
+
+            <span class="category-code">
+              {{ category.code }}
+            </span>
+
+          </div>
+
+          <div class="category-symbol">
+            <span class="symbol-horizontal"></span>
+            <span class="symbol-vertical"></span>
+            <span class="symbol-center"></span>
+          </div>
+
+          <h3>{{ category.title }}</h3>
+
+          <p>{{ category.description }}</p>
+
+          <div class="category-platforms">
+
+            @for (platform of category.platforms; track platform) {
+            <span>{{ platform }}</span>
+            }
+
+          </div>
+
+          <div class="category-card-footer">
+            <span>PLATFORM CATEGORY</span>
+            <span class="category-arrow">→</span>
+          </div>
+
+        </article>
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       TECHNOLOGY ENABLED OPERATIONS
+  ====================================== -->
+  <section class="tech-capabilities-section section-space">
+
+    <div class="tech-grid-background dark-grid"></div>
+
+    <div class="tech-container">
+
+      <div class="tech-section-heading centered-tech-heading scroll-reveal">
+
+        <span class="tech-section-eyebrow light-eyebrow">
+          <span></span>
+          BEYOND THE SOFTWARE
+          <span></span>
+        </span>
+
+        <h2>
+          Technology is the tool.
+          <span>Better workflows are the goal.</span>
+        </h2>
+
+        <p>
+          Our support goes beyond working inside software. We help organize
+          the processes, financial information, and recurring activities
+          that make your systems useful to your operations.
+        </p>
+
+      </div>
+
+
+      <div class="tech-capability-grid">
+
+        @for (item of capabilities; track item.number) {
+        <article class="tech-capability-card scroll-reveal">
+
+          <div class="tech-capability-top">
+
+            <span class="tech-capability-number">
+              {{ item.number }}
+            </span>
+
+            <span class="tech-capability-code">
+              {{ item.code }}
+            </span>
+
+          </div>
+
+          <div class="capability-decoration">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <h3>{{ item.title }}</h3>
+
+          <p class="tech-capability-description">
+            {{ item.description }}
+          </p>
+
+          <ul class="tech-capability-points">
+
+            @for (point of item.points; track point) {
+            <li>
+              <span>+</span>
+              {{ point }}
+            </li>
+            }
+
+          </ul>
+
+          <div class="tech-capability-bottom">
+            <span>HHM TECHNOLOGY SUPPORT</span>
+            <span>→</span>
+          </div>
+
+        </article>
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       CONNECTED WORKFLOW
+  ====================================== -->
+  <section class="workflow-section section-space">
+
+    <div class="tech-container">
+
+      <div class="tech-section-heading split-tech-heading scroll-reveal">
+
+        <div>
+          <span class="tech-section-eyebrow">
+            <span></span>
+            HOW WE APPROACH TECHNOLOGY
+          </span>
+
+          <h2>
+            From your systems
+            <span>to organized operations.</span>
+          </h2>
+        </div>
+
+        <p>
+          We begin by understanding your current environment and then align
+          the relevant activities with your systems, processes, and agreed
+          business requirements.
+        </p>
+
+      </div>
+
+
+      <div class="workflow-visual scroll-reveal">
+
+        <div class="workflow-visual-header">
+          <span>OPERATIONAL WORKFLOW</span>
+          <span class="workflow-visual-code">PROCESS / 001</span>
+        </div>
+
+
+        <div class="workflow-stages">
+
+          <div class="workflow-stage">
+            <div class="workflow-stage-icon">
+              <span class="stage-icon-grid"></span>
+            </div>
+
+            <span class="workflow-stage-index">01</span>
+            <h3>Your Systems</h3>
+            <p>Existing software and tools</p>
+          </div>
+
+          <span class="workflow-connector">
+            <span></span>
+          </span>
+
+          <div class="workflow-stage active-stage">
+            <div class="workflow-stage-icon">
+              <span class="stage-process-icon">HHM</span>
+            </div>
+
+            <span class="workflow-stage-index">02</span>
+            <h3>Process & Coordinate</h3>
+            <p>Organized financial workflows</p>
+          </div>
+
+          <span class="workflow-connector">
+            <span></span>
+          </span>
+
+          <div class="workflow-stage">
+            <div class="workflow-stage-icon">
+              <span class="stage-output-icon">✓</span>
+            </div>
+
+            <span class="workflow-stage-index">03</span>
+            <h3>Reviewed Outputs</h3>
+            <p>Validated information and reports</p>
+          </div>
+
+        </div>
+
+
+        <div class="workflow-visual-footer">
+          <span class="workflow-status-dot"></span>
+          <span>DEFINED PROCESSES</span>
+          <span class="workflow-footer-divider"></span>
+          <span>REVIEWED DELIVERABLES</span>
+          <span class="workflow-footer-divider"></span>
+          <span>CONNECTED INFORMATION</span>
+        </div>
+
+      </div>
+
+
+      <div class="workflow-step-grid">
+
+        @for (step of workflowSteps; track step.number) {
+        <article class="workflow-step-card scroll-reveal">
+
+          <span class="workflow-step-number">
+            {{ step.number }}
+          </span>
+
+          <h3>{{ step.title }}</h3>
+
+          <p>{{ step.description }}</p>
+
+        </article>
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       WHY TECHNOLOGY + PEOPLE
+  ====================================== -->
+  <section class="technology-value-section section-space">
+
+    <div class="tech-container technology-value-layout">
+
+      <div class="technology-value-content scroll-reveal">
+
+        <span class="tech-section-eyebrow">
+          <span></span>
+          A PRACTICAL APPROACH
+        </span>
+
+        <h2>
+          Smart tools.
+          <span>Human expertise.</span>
+          <br>
+          Connected outcomes.
+        </h2>
+
+        <p>
+          Software can organize information, automate certain tasks, and
+          connect business processes. The right people and review practices
+          help ensure that the information is handled with care.
+        </p>
+
+        <p>
+          HHM Global Accounting brings together accounting knowledge,
+          technology familiarity, and structured operational support
+          around the systems your business already uses.
+        </p>
+
+        <a href="/contact" class="tech-text-link">
+          Discuss your technology requirements
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <div class="technology-value-visual scroll-reveal">
+
+        <div class="value-visual-grid"></div>
+
+        <div class="value-orbit value-orbit-one"></div>
+        <div class="value-orbit value-orbit-two"></div>
+        <div class="value-orbit value-orbit-three"></div>
+
+        <div class="value-center">
+          <span class="value-center-mark">HHM</span>
+          <span>GLOBAL ACCOUNTING</span>
+        </div>
+
+        <div class="value-node value-node-one">
+          <span class="value-node-icon">01</span>
+          <span>TECHNOLOGY</span>
+        </div>
+
+        <div class="value-node value-node-two">
+          <span class="value-node-icon">02</span>
+          <span>EXPERTISE</span>
+        </div>
+
+        <div class="value-node value-node-three">
+          <span class="value-node-icon">03</span>
+          <span>PROCESS</span>
+        </div>
+
+        <div class="value-node value-node-four">
+          <span class="value-node-icon">04</span>
+          <span>QUALITY</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       TECHNOLOGY WORKFLOW
+  ====================================== -->
+  <section class="technology-process-section section-space">
+
+    <div class="tech-container">
+
+      <div class="tech-section-heading centered-tech-heading scroll-reveal">
+
+        <span class="tech-section-eyebrow">
+          <span></span>
+          OUR WORKING APPROACH
+          <span></span>
+        </span>
+
+        <h2>
+          A structured approach
+          <span>to every technology engagement.</span>
+        </h2>
+
+        <p>
+          Whether you need system-related support, implementation
+          assistance, migration support, or ongoing accounting operations,
+          we begin with a clearly defined scope.
+        </p>
+
+      </div>
+
+
+      <div class="process-timeline">
+
+        @for (step of workflowSteps; track step.number) {
+        <article class="process-timeline-item scroll-reveal">
+
+          <div class="timeline-marker">
+            {{ step.number }}
+          </div>
+
+          <div class="timeline-content">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </div>
+
+          <span class="timeline-arrow">→</span>
+
+        </article>
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       FAQ
+  ====================================== -->
+  <section class="tech-faq-section section-space" id="technology-faq">
+
+    <div class="tech-container tech-faq-layout">
+
+      <div class="tech-faq-intro scroll-reveal">
+
+        <span class="tech-section-eyebrow">
+          <span></span>
+          COMMON QUESTIONS
+        </span>
+
+        <h2>
+          Technology
+          <span>questions, answered.</span>
+        </h2>
+
+        <p>
+          Learn more about the platforms we work with and the technology
+          support available through HHM Global Accounting.
+        </p>
+
+        <div class="tech-faq-contact">
+          <span>Have a specific system requirement?</span>
+
+          <a href="/contact">
+            Speak with our team
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="tech-faq-list scroll-reveal">
+
+        @for (faq of faqs; track faq.question; let i = $index) {
+        <details class="tech-faq-item" [open]="i === 0">
+
+          <summary>
+            <span>{{ faq.question }}</span>
+            <span class="tech-faq-toggle"></span>
+          </summary>
+
+          <div class="tech-faq-answer">
+            <p>{{ faq.answer }}</p>
+          </div>
+
+        </details>
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       FINAL CTA
+  ====================================== -->
+  <section class="technology-cta-section">
+
+    <div class="tech-cta-grid"></div>
+    <div class="tech-cta-glow"></div>
+
+    <div class="tech-container technology-cta-layout">
+
+      <div class="technology-cta-content scroll-reveal">
+
+        <span class="tech-section-eyebrow cta-eyebrow">
+          <span></span>
+          LET'S CONNECT YOUR WORKFLOWS
+        </span>
+
+        <h2>
+          Your technology.
+          <span>Our operational expertise.</span>
+        </h2>
+
+        <p>
+          Tell us about the systems your business uses and the areas where
+          you need support. Let's explore how HHM Global Accounting can
+          work alongside your existing technology environment.
+        </p>
+
+        <div class="technology-cta-actions">
+
+          <a href="/contact" class="technology-cta-button">
+            Discuss Your Requirements
+            <span>→</span>
+          </a>
+
+          <a href="mailto:info@hhmconsultancyservices.com" class="technology-cta-email">
+            info@hhmconsultancyservices.com
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="technology-cta-mark scroll-reveal">
+        <span class="cta-mark-orbit cta-mark-orbit-one"></span>
+        <span class="cta-mark-orbit cta-mark-orbit-two"></span>
+        <span class="cta-mark-orbit cta-mark-orbit-three"></span>
+        <span class="cta-mark-text">HHM</span>
+        <span class="cta-mark-caption">TECHNOLOGY ENABLED</span>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>

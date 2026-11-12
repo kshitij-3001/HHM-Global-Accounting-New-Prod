@@ -1,0 +1,952 @@
+/* =========================================================
+   HHM GLOBAL ACCOUNTING — PAYROLL MANAGEMENT PAGE
+   Shared styles: services-page.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE BASE
+   ========================================================= */
+
+.payroll-page {
+  --payroll-orange: #f16819;
+  --payroll-orange-dark: #d9560d;
+  --payroll-black: #151515;
+  --payroll-dark: #1c1c1c;
+  --payroll-text: #292929;
+  --payroll-muted: #696969;
+  --payroll-light: #f7f7f5;
+  --payroll-white: #ffffff;
+  --payroll-border: #e7e5e1;
+
+  width: 100%;
+  color: var(--payroll-text);
+  background: var(--payroll-white);
+  overflow-x: clip;
+}
+
+.payroll-page *,
+.payroll-page *::before,
+.payroll-page *::after {
+  box-sizing: border-box;
+}
+
+.payroll-page h1,
+.payroll-page h2,
+.payroll-page h3,
+.payroll-page p {
+  margin-top: 0;
+}
+
+.payroll-page a {
+  text-decoration: none;
+}
+
+.payroll-page p {
+  line-height: 1.8;
+}
+
+.payroll-page a:focus-visible {
+  outline: 3px solid var(--payroll-orange);
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   2. HERO
+   ========================================================= */
+
+.payroll-hero {
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(241, 104, 25, 0.1),
+      transparent 29%
+    ),
+    linear-gradient(135deg, #151515 0%, #1b1b1b 60%, #111111 100%);
+}
+
+.payroll-hero .services-hero-grid {
+  align-items: center;
+  gap: 65px;
+}
+
+.payroll-hero .services-hero-copy h1 {
+  max-width: 660px;
+  font-size: clamp(42px, 5vw, 67px);
+  letter-spacing: -2.4px;
+}
+
+.payroll-hero .services-hero-description {
+  max-width: 570px;
+}
+
+.payroll-hero-visual {
+  padding: 25px;
+}
+
+.payroll-hero-visual .services-visual-heading {
+  padding-top: 26px;
+}
+
+.payroll-hero-visual .services-visual-heading h2 {
+  max-width: 400px;
+  font-size: clamp(25px, 2.5vw, 32px);
+}
+
+
+/* =========================================================
+   3. PAYROLL CYCLE INSIDE HERO PANEL
+   ========================================================= */
+
+.payroll-cycle-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.payroll-cycle-item {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 20px;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: padding 0.22s ease;
+}
+
+.payroll-cycle-item:hover {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.payroll-cycle-number {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  color: var(--payroll-orange);
+  background: rgba(241, 104, 25, 0.09);
+  border: 1px solid rgba(241, 104, 25, 0.28);
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.payroll-cycle-number-final {
+  color: var(--payroll-white);
+  background: var(--payroll-orange);
+  border-color: var(--payroll-orange);
+}
+
+.payroll-cycle-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.payroll-cycle-copy strong {
+  color: var(--payroll-white);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.payroll-cycle-copy > span {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.payroll-cycle-arrow {
+  color: var(--payroll-orange);
+  font-size: 18px;
+  transition: transform 0.22s ease;
+}
+
+.payroll-cycle-item:hover .payroll-cycle-arrow {
+  transform: translateX(3px);
+}
+
+.payroll-cycle-connector {
+  height: 16px;
+  padding-left: 17px;
+}
+
+.payroll-cycle-connector span {
+  display: block;
+  width: 1px;
+  height: 16px;
+  background: rgba(241, 104, 25, 0.5);
+}
+
+
+/* =========================================================
+   4. INTRODUCTION
+   ========================================================= */
+
+.payroll-intro-section {
+  background: var(--payroll-white);
+}
+
+.payroll-intro-section .services-intro-grid {
+  gap: 75px;
+}
+
+.payroll-intro-section .services-intro-label h2 {
+  max-width: 520px;
+}
+
+.payroll-intro-section .services-intro-content {
+  max-width: 540px;
+}
+
+
+/* =========================================================
+   5. PAYROLL SERVICE CARDS
+   ========================================================= */
+
+.payroll-services-section {
+  background: var(--payroll-light);
+}
+
+.payroll-services-grid .payroll-service-card {
+  min-height: 315px;
+}
+
+.payroll-service-card {
+  padding: 24px;
+}
+
+.payroll-service-card h3 {
+  max-width: 340px;
+}
+
+.payroll-service-card > p {
+  margin-bottom: 22px;
+}
+
+.payroll-service-card .service-card-bottom {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payroll-service-card .service-card-category {
+  max-width: 58%;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.payroll-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--payroll-black) !important;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.payroll-link-arrow {
+  color: var(--payroll-orange);
+  font-size: 17px;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.payroll-card-link:hover {
+  color: var(--payroll-orange) !important;
+}
+
+.payroll-card-link:hover .payroll-link-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   6. DISTINCTIVE PAYROLL WORKFLOW
+   ========================================================= */
+
+.payroll-workflow-section {
+  padding: 96px 0 90px;
+  color: var(--payroll-white);
+  background:
+    radial-gradient(
+      circle at 12% 95%,
+      rgba(241, 104, 25, 0.08),
+      transparent 30%
+    ),
+    #151515;
+}
+
+.payroll-workflow-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.75fr);
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 45px;
+}
+
+.payroll-workflow-heading h2 {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: var(--payroll-white);
+  font-size: clamp(33px, 3.9vw, 47px);
+  font-weight: 650;
+  line-height: 1.16;
+  letter-spacing: -1.5px;
+}
+
+.payroll-workflow-heading h2 span {
+  display: block;
+  color: var(--payroll-orange);
+}
+
+.payroll-workflow-heading > p {
+  max-width: 450px;
+  margin: 0 0 4px;
+  color: rgba(255, 255, 255, 0.61);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+
+/* Four timeline columns */
+
+.payroll-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.payroll-timeline-step {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 300px;
+  padding: 23px 21px 25px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.payroll-timeline-step:first-child {
+  padding-left: 0;
+}
+
+.payroll-timeline-step:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.payroll-timeline-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.payroll-timeline-top > span:first-child {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.payroll-timeline-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  color: var(--payroll-orange);
+  background: rgba(241, 104, 25, 0.1);
+  border: 1px solid rgba(241, 104, 25, 0.23);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.payroll-timeline-number {
+  position: relative;
+  display: grid;
+  width: 49px;
+  height: 49px;
+  flex: 0 0 49px;
+  margin-bottom: 24px;
+  place-items: center;
+  color: var(--payroll-orange);
+  background: #242424;
+  border: 1px solid rgba(241, 104, 25, 0.55);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.payroll-timeline-number-last {
+  color: var(--payroll-white);
+  background: var(--payroll-orange);
+  border-color: var(--payroll-orange);
+}
+
+.payroll-timeline-step h3 {
+  max-width: 230px;
+  margin-bottom: 11px;
+  color: var(--payroll-white);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.payroll-timeline-step > p {
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.payroll-timeline-tag {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 7px 9px;
+  color: rgba(255, 255, 255, 0.66);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+
+/* Workflow note */
+
+.payroll-workflow-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 17px 20px;
+  background: rgba(255, 255, 255, 0.045);
+  border-left: 2px solid var(--payroll-orange);
+}
+
+.payroll-workflow-note-icon {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  place-items: center;
+  color: var(--payroll-black);
+  background: var(--payroll-orange);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.payroll-workflow-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   7. COORDINATION SECTION
+   ========================================================= */
+
+.payroll-coordination-section {
+  padding: 98px 0;
+  background: var(--payroll-white);
+}
+
+.payroll-coordination-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 75px;
+}
+
+.payroll-coordination-copy h2 {
+  max-width: 500px;
+  margin: 18px 0 18px;
+  color: var(--payroll-black);
+  font-size: clamp(33px, 3.7vw, 44px);
+  font-weight: 650;
+  line-height: 1.18;
+  letter-spacing: -1.4px;
+}
+
+.payroll-coordination-copy h2 span {
+  display: block;
+  color: var(--payroll-orange);
+}
+
+.payroll-coordination-copy > p {
+  max-width: 470px;
+  margin-bottom: 21px;
+  color: var(--payroll-muted);
+  font-size: 12px;
+  line-height: 1.95;
+}
+
+
+/* Coordination list */
+
+.payroll-coordination-list {
+  min-width: 0;
+  border-top: 1px solid var(--payroll-border);
+}
+
+.payroll-coordination-item {
+  display: grid;
+  grid-template-columns: 35px minmax(0, 1fr) 22px;
+  align-items: start;
+  gap: 14px;
+  padding: 22px 4px;
+  border-bottom: 1px solid var(--payroll-border);
+  transition: padding 0.22s ease;
+}
+
+.payroll-coordination-item:hover {
+  padding-right: 9px;
+  padding-left: 9px;
+}
+
+.payroll-coordination-index {
+  display: grid;
+  width: 33px;
+  height: 33px;
+  place-items: center;
+  color: var(--payroll-orange);
+  background: #fff2e9;
+  border: 1px solid #ffdfcb;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.payroll-coordination-item > div {
+  min-width: 0;
+}
+
+.payroll-coordination-item strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--payroll-black);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.payroll-coordination-item p {
+  margin: 0;
+  color: var(--payroll-muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.payroll-coordination-arrow {
+  color: var(--payroll-orange);
+  font-size: 19px;
+  transition: transform 0.2s ease;
+}
+
+.payroll-coordination-item:hover .payroll-coordination-arrow {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   8. CTA
+   ========================================================= */
+
+.payroll-cta-section {
+  background: var(--payroll-white);
+}
+
+.payroll-cta-section .services-cta-panel {
+  background:
+    radial-gradient(
+      circle at 84% 42%,
+      rgba(241, 104, 25, 0.15),
+      transparent 32%
+    ),
+    #171717;
+}
+
+
+/* =========================================================
+   9. TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .payroll-hero .services-hero-grid {
+    gap: 35px;
+  }
+
+  .payroll-hero .services-hero-copy h1 {
+    font-size: clamp(40px, 5vw, 55px);
+    letter-spacing: -1.8px;
+  }
+
+  .payroll-hero-visual {
+    padding: 21px;
+  }
+
+  .payroll-timeline-step {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .payroll-timeline-step:first-child {
+    padding-left: 0;
+  }
+
+  .payroll-timeline-step:last-child {
+    padding-right: 0;
+  }
+
+  .payroll-coordination-grid {
+    gap: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   10. MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Hero */
+
+  .payroll-hero .services-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+    padding-bottom: 40px;
+  }
+
+  .payroll-hero .services-hero-copy h1 {
+    font-size: clamp(37px, 9.5vw, 51px);
+    line-height: 1.08;
+    letter-spacing: -1.6px;
+  }
+
+  .payroll-hero .services-hero-description {
+    font-size: 13px;
+  }
+
+  .payroll-hero .services-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .payroll-hero .services-hero-actions .services-btn {
+    width: 100%;
+  }
+
+  .payroll-hero .services-hero-pills {
+    gap: 7px;
+  }
+
+  .payroll-hero .services-hero-pills span {
+    font-size: 9px;
+  }
+
+  .payroll-hero-visual {
+    padding: 19px;
+  }
+
+  .payroll-hero-visual .services-visual-heading h2 {
+    font-size: 27px;
+  }
+
+  .payroll-cycle-item {
+    grid-template-columns: 33px minmax(0, 1fr) 17px;
+    gap: 9px;
+  }
+
+  .payroll-cycle-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .payroll-cycle-copy strong {
+    font-size: 11px;
+  }
+
+  .payroll-cycle-copy > span {
+    font-size: 9px;
+  }
+
+  .payroll-hero .services-hero-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 15px;
+  }
+
+  .payroll-hero .services-hero-bottom-note {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    max-width: none;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+
+  /* Intro */
+
+  .payroll-intro-section {
+    padding: 62px 0;
+  }
+
+  .payroll-intro-section .services-intro-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .payroll-intro-section .services-intro-label h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .payroll-intro-section .services-intro-content {
+    padding-left: 18px;
+  }
+
+
+  /* Service catalog */
+
+  .payroll-services-section {
+    padding: 68px 0 65px;
+  }
+
+  .payroll-services-section .services-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .payroll-services-section .services-section-heading-copy h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  .payroll-services-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .payroll-services-grid .payroll-service-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .payroll-service-card > p {
+    font-size: 12px;
+  }
+
+  .payroll-service-card .service-card-category {
+    max-width: none;
+  }
+
+  .payroll-service-card .service-card-bottom {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .payroll-services-section .services-catalog-footer {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .payroll-services-section .services-catalog-footer .services-btn {
+    width: 100%;
+  }
+
+
+  /* Workflow */
+
+  .payroll-workflow-section {
+    padding: 68px 0 65px;
+  }
+
+  .payroll-workflow-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 19px;
+    margin-bottom: 28px;
+  }
+
+  .payroll-workflow-heading h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .payroll-workflow-heading > p {
+    font-size: 12px;
+  }
+
+  .payroll-timeline {
+    grid-template-columns: minmax(0, 1fr);
+    border-bottom: none;
+  }
+
+  .payroll-timeline-step,
+  .payroll-timeline-step:first-child,
+  .payroll-timeline-step:last-child {
+    min-height: 0;
+    padding: 22px 0 25px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  .payroll-timeline-top {
+    margin-bottom: 20px;
+  }
+
+  .payroll-timeline-number {
+    margin-bottom: 19px;
+  }
+
+  .payroll-timeline-step h3 {
+    max-width: none;
+    font-size: 18px;
+  }
+
+  .payroll-timeline-step > p {
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .payroll-workflow-note {
+    padding: 15px;
+  }
+
+
+  /* Coordination */
+
+  .payroll-coordination-section {
+    padding: 68px 0;
+  }
+
+  .payroll-coordination-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 29px;
+  }
+
+  .payroll-coordination-copy h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .payroll-coordination-item {
+    gap: 10px;
+    padding: 19px 2px;
+  }
+
+
+  /* CTA */
+
+  .payroll-cta-section {
+    padding-bottom: 65px;
+  }
+
+  .payroll-cta-section .services-cta-panel {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 35px 24px;
+  }
+
+  .payroll-cta-section .services-cta-content h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  .payroll-cta-section .services-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .payroll-cta-section .services-cta-actions .services-btn {
+    width: 100%;
+  }
+
+  .payroll-cta-section .services-cta-side {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   11. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .payroll-hero .services-hero-copy h1 {
+    font-size: 35px;
+    letter-spacing: -1.2px;
+  }
+
+  .payroll-hero-visual {
+    padding: 15px;
+  }
+
+  .payroll-hero-visual .services-visual-brand {
+    gap: 8px;
+  }
+
+  .payroll-hero-visual .services-visual-brand strong {
+    font-size: 10px;
+  }
+
+  .payroll-hero-visual .services-visual-brand > div > span {
+    font-size: 8px;
+  }
+
+  .payroll-hero-visual .services-visual-status {
+    padding: 6px 7px;
+    font-size: 7px;
+  }
+
+  .payroll-hero .services-hero-bottom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .payroll-services-section .services-section-heading-copy h2,
+  .payroll-workflow-heading h2,
+  .payroll-coordination-copy h2,
+  .payroll-cta-section .services-cta-content h2 {
+    font-size: 31px;
+  }
+
+  .payroll-services-grid .payroll-service-card {
+    padding: 19px;
+  }
+
+  .payroll-cta-section .services-cta-panel {
+    padding: 29px 19px;
+  }
+
+}
+
+
+/* =========================================================
+   12. ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .payroll-page *,
+  .payroll-page *::before,
+  .payroll-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}

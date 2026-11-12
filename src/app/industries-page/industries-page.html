@@ -1,0 +1,150 @@
+<main class="industries-page" id="industries-top">
+
+  <!-- HERO -->
+  <section class="industries-hero">
+    <div class="industries-shell">
+
+      <div class="industries-hero-label scroll-reveal">
+        <span class="industries-live-dot"></span>
+        INDUSTRIES WE SERVE
+      </div>
+
+      <h1 class="scroll-reveal">
+        Finance Support That
+        <span>Fits Your Industry</span>
+      </h1>
+
+      <p class="industries-hero-description scroll-reveal">
+        From accounting firms to growing businesses, we adapt our
+        accounting, payroll and tax support to your industry's financial
+        workflows and operational needs.
+      </p>
+
+      <div class="industries-hero-meta scroll-reveal">
+        <span>12 INDUSTRY CATEGORIES</span>
+        <span class="industries-meta-divider"></span>
+        <span>FLEXIBLE FINANCE SUPPORT</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- INDUSTRY COLLECTION -->
+  <section class="industries-grid-section">
+    <div class="industries-shell">
+
+      <div class="industries-grid">
+
+        @for (industry of industries; track industry.number) {
+
+          <a
+            class="industry-card scroll-reveal"
+            [class.industry-card-cta]="industry.isCta"
+            href="/contact"
+            [attr.aria-label]="
+              industry.isCta
+                ? 'Contact HHM about your industry'
+                : 'Enquire about accounting support for ' + industry.name
+            "
+          >
+
+            <!-- CARD TOP -->
+            <div class="industry-card-top">
+              <span class="industry-number">
+                {{ industry.number }}
+              </span>
+
+              <span class="industry-card-category">
+                {{ industry.isCta ? 'LET’S CONNECT' : 'INDUSTRY SUPPORT' }}
+              </span>
+            </div>
+
+            <!-- ICON -->
+            <div class="industry-icon">
+              <span>{{ industry.symbol }}</span>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="industry-card-content">
+
+              <h2>{{ industry.name }}</h2>
+
+              <p>{{ industry.description }}</p>
+
+            </div>
+
+            <!-- CARD FOOTER -->
+            <div class="industry-card-bottom">
+
+              @if (industry.isCta) {
+                <span class="industry-card-action-label">
+                  Talk to our team
+                </span>
+              } @else {
+                <span class="industry-card-action-label">
+                  Explore support
+                </span>
+              }
+
+              <span class="industry-card-arrow" aria-hidden="true">
+                →
+              </span>
+
+            </div>
+
+          </a>
+
+        }
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BOTTOM CTA -->
+  <section class="industries-bottom-section">
+    <div class="industries-shell">
+
+      <div class="industries-bottom-content scroll-reveal">
+
+        <div class="industries-bottom-left">
+          <p class="industries-bottom-eyebrow">
+            YOUR INDUSTRY. YOUR REQUIREMENTS.
+          </p>
+
+          <h2>
+            Let's discuss what<br>
+            <span>your business needs.</span>
+          </h2>
+        </div>
+
+        <div class="industries-bottom-right">
+
+          <p>
+            Tell us about your industry, current finance workflows
+            and the areas where you need support. We'll discuss
+            a suitable approach based on your requirements.
+          </p>
+
+          <a href="/contact" class="industries-contact-button">
+            Discuss your requirements
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="industries-footer-line">
+        <span>HHM GLOBAL ACCOUNTING</span>
+        <a href="/industries#industries-top">
+          BACK TO TOP ↑
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>

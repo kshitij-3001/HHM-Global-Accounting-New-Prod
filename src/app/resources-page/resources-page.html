@@ -1,0 +1,640 @@
+
+<main class="resources-page">
+
+  <!-- =====================================
+       HERO
+  ====================================== -->
+  <section class="resources-hero">
+
+    <div class="resources-hero-decoration"></div>
+
+    <div class="resources-container resources-hero-layout">
+
+      <div class="resources-hero-content scroll-reveal">
+
+        <span class="resources-eyebrow">
+          <span class="eyebrow-line"></span>
+          RESOURCES & KNOWLEDGE
+        </span>
+
+        <h1>
+          Insights, tools &
+          <span>resources to move</span>
+          your business forward.
+        </h1>
+
+        <p>
+          Explore practical resources from HHM Global Accounting designed
+          to help businesses and accounting professionals organize
+          financial processes, understand key topics, and work more
+          efficiently.
+        </p>
+
+        <div class="resources-hero-actions">
+
+          <a
+            href="#resource-library"
+            class="resources-btn resources-btn-primary"
+            (click)="scrollToSection($event, 'resource-library')"
+          >
+            Explore Resources
+            <span>→</span>
+          </a>
+
+          <a href="/contact" class="resources-text-button">
+            Talk to Our Team
+            <span>→</span>
+          </a>
+
+        </div>
+
+        <div class="resources-hero-note">
+          <span class="hero-note-dot"></span>
+          Practical knowledge. Useful tools. Better-organized workflows.
+        </div>
+
+      </div>
+
+
+      <!-- HERO VISUAL -->
+      <div class="resources-hero-visual scroll-reveal">
+
+        <div class="hero-visual-topline">
+          <span>HHM RESOURCE CENTRE</span>
+          <span class="visual-code">LIBRARY / 001</span>
+        </div>
+
+
+        <div class="resource-visual-main">
+
+          <div class="visual-large-card">
+
+            <div class="visual-card-header">
+              <span class="visual-card-label">KNOWLEDGE HUB</span>
+              <span class="visual-card-mark">HHM</span>
+            </div>
+
+            <div class="visual-document-shape">
+              <span class="document-line line-one"></span>
+              <span class="document-line line-two"></span>
+              <span class="document-line line-three"></span>
+              <span class="document-highlight"></span>
+              <span class="document-line line-four"></span>
+            </div>
+
+            <div class="visual-card-footer">
+              <div>
+                <strong>Explore. Learn. Apply.</strong>
+                <small>Resources for financial operations</small>
+              </div>
+              <span class="visual-card-arrow">→</span>
+            </div>
+
+          </div>
+
+
+          <div class="visual-side-card side-card-top">
+            <span class="side-card-icon checklist-icon">✓</span>
+            <span class="side-card-title">CHECKLISTS</span>
+            <small>Practical tools</small>
+          </div>
+
+          <div class="visual-side-card side-card-bottom">
+            <span class="side-card-icon insight-icon">i</span>
+            <span class="side-card-title">INSIGHTS</span>
+            <small>Ideas & updates</small>
+          </div>
+
+          <div class="visual-floating-dot floating-dot-one"></div>
+          <div class="visual-floating-dot floating-dot-two"></div>
+
+        </div>
+
+
+        <div class="hero-visual-bottomline">
+          <span>ACCOUNTING</span>
+          <span></span>
+          <span>PAYROLL</span>
+          <span></span>
+          <span>FINANCIAL OPERATIONS</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       RESOURCE LIBRARY
+  ====================================== -->
+  <section
+    class="resource-library-section section-space"
+    id="resource-library"
+  >
+
+    <div class="resources-container">
+
+      <div class="resources-section-heading split-resources-heading scroll-reveal">
+
+        <div>
+          <span class="resources-section-eyebrow">
+            <span></span>
+            EXPLORE OUR LIBRARY
+          </span>
+
+          <h2>
+            Resources for
+            <span>everyday business needs.</span>
+          </h2>
+        </div>
+
+        <p>
+          Browse our collection of insights, practical checklists,
+          knowledge materials, and client experiences. Choose a resource
+          based on what you need to learn or organize.
+        </p>
+
+      </div>
+
+
+      <div class="resource-card-grid">
+
+        @for (card of resourceCards; track card.number) {
+
+          <article
+            class="resource-card scroll-reveal"
+            [class.resource-coming-soon]="card.type === 'coming-soon'"
+            [id]="card.visual === 'ebooks' ? 'ebooks' : null"
+          >
+
+            <div class="resource-card-top">
+
+              <span class="resource-card-number">
+                {{ card.number }}
+              </span>
+
+              <span
+                class="resource-status"
+                [class.status-coming-soon]="card.type === 'coming-soon'"
+              >
+                {{ card.status }}
+              </span>
+
+            </div>
+
+
+            <div
+              [class]="'resource-card-visual visual-' + card.visual"
+            >
+
+              @if (card.visual === 'blog') {
+
+                <div class="blog-visual-content">
+                  <span class="visual-small-label">IDEAS & PERSPECTIVES</span>
+                  <div class="blog-visual-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="blog-visual-symbol">✳</span>
+                </div>
+
+              } @else if (card.visual === 'checklists') {
+
+                <div class="checklist-visual-content">
+                  <div class="mini-check-row">
+                    <span>✓</span>
+                    <i></i>
+                  </div>
+                  <div class="mini-check-row">
+                    <span>✓</span>
+                    <i></i>
+                  </div>
+                  <div class="mini-check-row">
+                    <span></span>
+                    <i></i>
+                  </div>
+                  <div class="mini-check-row">
+                    <span></span>
+                    <i></i>
+                  </div>
+                </div>
+
+              } @else if (card.visual === 'ebooks') {
+
+                <div class="ebook-visual-content">
+                  <div class="ebook-book">
+                    <span>HHM</span>
+                    <strong>KNOWLEDGE<br>GUIDES</strong>
+                    <small>COMING SOON</small>
+                  </div>
+                </div>
+
+              } @else {
+
+                <div class="testimonial-visual-content">
+                  <span class="quote-mark">“</span>
+                  <div class="testimonial-visual-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="testimonial-visual-base"></div>
+                </div>
+
+              }
+
+            </div>
+
+
+            <div class="resource-card-content">
+
+              <span class="resource-card-category">
+                {{ card.category }}
+              </span>
+
+              <h3>{{ card.title }}</h3>
+
+              <p>{{ card.description }}</p>
+
+              @if (card.type === 'active') {
+
+                <a
+                  [href]="card.href"
+                  class="resource-card-link"
+                >
+                  {{ card.action }}
+                  <span>→</span>
+                </a>
+
+              } @else {
+
+                <span class="resource-coming-label">
+                  {{ card.action }}
+                </span>
+
+              }
+
+            </div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       CHECKLIST SPOTLIGHT
+  ====================================== -->
+  <section class="checklist-spotlight-section section-space">
+
+    <div class="resources-container checklist-spotlight-layout">
+
+      <div class="checklist-spotlight-content scroll-reveal">
+
+        <span class="resources-section-eyebrow">
+          <span></span>
+          PRACTICAL TOOLS
+        </span>
+
+        <h2>
+          Make recurring
+          <span>finance tasks easier to organize.</span>
+        </h2>
+
+        <p>
+          Our checklists provide structured task references for common
+          financial and accounting activities. Use them to review work,
+          organize processes, and keep important steps visible.
+        </p>
+
+        <a href="/resources/checklists" class="resources-btn resources-btn-dark">
+          Explore All Checklists
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <div class="checklist-topic-panel scroll-reveal">
+
+        <div class="topic-panel-header">
+          <div>
+            <span class="topic-panel-kicker">AVAILABLE CHECKLISTS</span>
+            <h3>Explore the topics</h3>
+          </div>
+
+          <span class="topic-panel-count">06</span>
+        </div>
+
+
+        <div class="checklist-topic-list">
+
+          @for (topic of checklistTopics; track topic.number) {
+
+            <a
+              href="/resources/checklists"
+              class="checklist-topic-row"
+            >
+
+              <span class="topic-number">
+                {{ topic.number }}
+              </span>
+
+              <span class="topic-copy">
+                <strong>{{ topic.title }}</strong>
+                <small>{{ topic.description }}</small>
+              </span>
+
+              <span class="topic-arrow">→</span>
+
+            </a>
+
+          }
+
+        </div>
+
+
+        <div class="topic-panel-footer">
+          <span>HHM GLOBAL ACCOUNTING</span>
+          <span>TOOLS / 001</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       INSIGHTS
+  ====================================== -->
+  <section class="insights-section section-space">
+
+    <div class="resources-container insights-layout">
+
+      <div class="insights-visual scroll-reveal">
+
+        <div class="insights-visual-grid"></div>
+
+        <div class="insights-visual-content">
+
+          <span class="insights-visual-kicker">
+            KNOWLEDGE & PERSPECTIVES
+          </span>
+
+          <div class="insights-orbit">
+            <span class="insights-orbit-ring ring-one"></span>
+            <span class="insights-orbit-ring ring-two"></span>
+            <span class="insights-orbit-ring ring-three"></span>
+
+            <span class="insights-center-mark">HHM</span>
+          </div>
+
+          <div class="insights-visual-bottom">
+            <span>READ</span>
+            <span>UNDERSTAND</span>
+            <span>APPLY</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="insights-content scroll-reveal">
+
+        <span class="resources-section-eyebrow">
+          <span></span>
+          FROM THE KNOWLEDGE DESK
+        </span>
+
+        <h2>
+          Stay informed.
+          <span>Keep learning.</span>
+        </h2>
+
+        <p>
+          Accounting and business operations continue to evolve.
+          Our Blog & Insights section is designed to share useful
+          perspectives, explain relevant topics, and make complex
+          business processes easier to understand.
+        </p>
+
+        <div class="insights-points">
+
+          <div>
+            <span>01</span>
+            <p>Accounting and bookkeeping perspectives</p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <p>Payroll and financial operations topics</p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <p>Business process and technology insights</p>
+          </div>
+
+        </div>
+
+        <a href="/resources/blog" class="resources-text-link">
+          Visit Blog & Insights
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       WHO CAN USE THESE RESOURCES
+  ====================================== -->
+  <section class="audience-section section-space">
+
+    <div class="resources-container">
+
+      <div class="resources-section-heading centered-resources-heading scroll-reveal">
+
+        <span class="resources-section-eyebrow">
+          <span></span>
+          BUILT FOR PRACTICAL USE
+          <span></span>
+        </span>
+
+        <h2>
+          Useful resources for
+          <span>the people behind the numbers.</span>
+        </h2>
+
+        <p>
+          Whether you manage a business, oversee finance operations,
+          or work in an accounting practice, explore information and
+          tools relevant to your work.
+        </p>
+
+      </div>
+
+
+      <div class="audience-grid">
+
+        @for (audience of audiences; track audience.number) {
+
+          <article class="audience-card scroll-reveal">
+
+            <span class="audience-number">
+              {{ audience.number }}
+            </span>
+
+            <div class="audience-accent"></div>
+
+            <h3>{{ audience.title }}</h3>
+
+            <p>{{ audience.description }}</p>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       TESTIMONIALS SPOTLIGHT
+  ====================================== -->
+  <section class="testimonials-spotlight-section">
+
+    <div class="resources-container testimonials-spotlight-layout">
+
+      <div class="testimonials-spotlight-content scroll-reveal">
+
+        <span class="resources-section-eyebrow light-resources-eyebrow">
+          <span></span>
+          CLIENT EXPERIENCES
+        </span>
+
+        <h2>
+          Collaboration matters.
+          <span>So does the experience.</span>
+        </h2>
+
+        <p>
+          The way we communicate, coordinate, and deliver support is an
+          important part of every working relationship. Explore the
+          client experience themes featured by HHM Global Accounting.
+        </p>
+
+        <a href="/resources/testimonials" class="resources-btn resources-btn-light">
+          Explore Client Experiences
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <div class="experience-themes scroll-reveal">
+
+        <div class="experience-theme">
+          <span class="theme-index">01</span>
+          <div>
+            <strong>Communication & Collaboration</strong>
+            <small>Clear coordination and working relationships</small>
+          </div>
+          <span class="theme-arrow">→</span>
+        </div>
+
+        <div class="experience-theme">
+          <span class="theme-index">02</span>
+          <div>
+            <strong>Process & Consistency</strong>
+            <small>Structured workflows and recurring support</small>
+          </div>
+          <span class="theme-arrow">→</span>
+        </div>
+
+        <div class="experience-theme">
+          <span class="theme-index">03</span>
+          <div>
+            <strong>Flexibility & Support</strong>
+            <small>Support aligned with changing requirements</small>
+          </div>
+          <span class="theme-arrow">→</span>
+        </div>
+
+        <div class="experience-theme">
+          <span class="theme-index">04</span>
+          <div>
+            <strong>Operational Experience</strong>
+            <small>Working across accounting activities</small>
+          </div>
+          <span class="theme-arrow">→</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       FINAL CTA
+  ====================================== -->
+  <section class="resources-cta-section">
+
+    <div class="resources-cta-decoration"></div>
+
+    <div class="resources-container resources-cta-content scroll-reveal">
+
+      <span class="resources-eyebrow">
+        <span class="eyebrow-line"></span>
+        NEED MORE THAN A RESOURCE?
+      </span>
+
+      <h2>
+        Looking for support with
+        <span>your financial operations?</span>
+      </h2>
+
+      <p>
+        Explore how HHM Global Accounting can support your business
+        with accounting, bookkeeping, payroll, financial reporting,
+        and related operational requirements.
+      </p>
+
+      <div class="resources-cta-actions">
+
+        <a href="/contact" class="resources-btn resources-btn-primary">
+          Discuss Your Requirements
+          <span>→</span>
+        </a>
+
+        <a href="/services" class="resources-text-button">
+          Explore Our Services
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>

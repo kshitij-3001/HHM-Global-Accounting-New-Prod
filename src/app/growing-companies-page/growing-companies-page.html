@@ -1,0 +1,650 @@
+<main class="growing-page">
+
+  <!-- HERO SECTION -->
+  <section class="growth-hero">
+    <div class="growth-container hero-layout">
+
+      <div class="hero-content scroll-reveal">
+        <span class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          SOLUTIONS FOR GROWING BUSINESSES
+        </span>
+
+        <h1>
+          Grow Your Business.
+          <span>We'll Support the Numbers.</span>
+        </h1>
+
+        <p class="hero-description">
+          As your business expands, your financial operations need to keep
+          pace. HHM Global Accounting supports growing companies with
+          accounting, payroll, reporting, and financial processes that adapt
+          to changing business requirements.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#capabilities" class="growth-btn growth-btn-primary"
+            (click)="scrollToSection($event, 'capabilities')">
+            Explore Our Services
+            <span class="btn-arrow">→</span>
+          </a>
+
+          <a href="/contact" class="growth-btn growth-btn-outline">
+            Talk to Our Team
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span class="note-dot"></span>
+          Accounting support aligned with your business needs
+        </div>
+      </div>
+
+
+      <!-- HERO FINANCE OVERVIEW CARD -->
+      <div class="hero-visual scroll-reveal">
+
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+
+        <div class="finance-panel">
+
+          <div class="panel-header">
+            <div>
+              <span class="panel-kicker">FINANCE OPERATIONS</span>
+              <h3>Business Overview</h3>
+            </div>
+
+            <span class="panel-menu">•••</span>
+          </div>
+
+          <div class="panel-status">
+            <span class="status-indicator"></span>
+            <span>Organized financial workflows</span>
+          </div>
+
+          <div class="panel-divider"></div>
+
+          <div class="workflow-list">
+
+            <div class="workflow-row">
+              <span class="workflow-icon accounting-icon">A</span>
+
+              <div class="workflow-copy">
+                <strong>Accounting</strong>
+                <small>Records & reconciliations</small>
+              </div>
+
+              <span class="workflow-arrow">→</span>
+            </div>
+
+            <div class="workflow-row">
+              <span class="workflow-icon payroll-icon">P</span>
+
+              <div class="workflow-copy">
+                <strong>Payroll</strong>
+                <small>Processing & reporting</small>
+              </div>
+
+              <span class="workflow-arrow">→</span>
+            </div>
+
+            <div class="workflow-row">
+              <span class="workflow-icon reporting-icon">R</span>
+
+              <div class="workflow-copy">
+                <strong>Reporting</strong>
+                <small>Financial visibility</small>
+              </div>
+
+              <span class="workflow-arrow">→</span>
+            </div>
+
+            <div class="workflow-row">
+              <span class="workflow-icon planning-icon">F</span>
+
+              <div class="workflow-copy">
+                <strong>Financial Planning</strong>
+                <small>Budgets & forecasts</small>
+              </div>
+
+              <span class="workflow-arrow">→</span>
+            </div>
+
+          </div>
+
+          <div class="panel-footer">
+            <span>Connected finance functions</span>
+            <span class="panel-footer-mark">HHM</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- HERO BOTTOM STRIP -->
+    <div class="hero-bottom">
+      <div class="growth-container hero-bottom-inner">
+        <span>ACCOUNTING</span>
+        <span class="bottom-separator"></span>
+        <span>PAYROLL</span>
+        <span class="bottom-separator"></span>
+        <span>FINANCIAL REPORTING</span>
+        <span class="bottom-separator"></span>
+        <span>OPERATIONAL SUPPORT</span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- BUSINESS CHALLENGES -->
+  <section class="challenge-section section-space">
+    <div class="growth-container">
+
+      <div class="section-heading split-heading scroll-reveal">
+
+        <div>
+          <span class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            WHEN BUSINESS GROWS
+          </span>
+
+          <h2>
+            Growth brings opportunity.
+            <span>And more financial complexity.</span>
+          </h2>
+        </div>
+
+        <p>
+          Increasing business activity often means more transactions,
+          employees, reporting requirements, and financial processes.
+          Without the right support, routine finance operations can take
+          attention away from important business priorities.
+        </p>
+
+      </div>
+
+      <div class="challenge-grid">
+
+        @for (item of challenges; track item.number) {
+        <article class="challenge-card scroll-reveal">
+
+          <div class="challenge-card-top">
+            <span class="challenge-number">{{ item.number }}</span>
+            <span class="card-cross">+</span>
+          </div>
+
+          <h3>{{ item.title }}</h3>
+
+          <p>{{ item.description }}</p>
+
+          <div class="challenge-card-line"></div>
+
+        </article>
+        }
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CAPABILITIES -->
+  <section class="capabilities-section section-space" id="capabilities">
+
+    <div class="growth-container">
+
+      <div class="section-heading centered-heading scroll-reveal">
+
+        <span class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          WHAT WE SUPPORT
+          <span class="eyebrow-line"></span>
+        </span>
+
+        <h2>
+          Financial capabilities
+          <span>for your next stage of growth.</span>
+        </h2>
+
+        <p>
+          From everyday accounting activities to financial planning and
+          system workflows, HHM Global Accounting provides support across
+          the functions that keep your business finances organized.
+        </p>
+
+      </div>
+
+
+      <div class="capability-grid">
+
+        @for (item of capabilities; track item.number) {
+        <article class="capability-card scroll-reveal">
+
+          <div class="capability-top">
+            <span class="capability-number">{{ item.number }}</span>
+            <span class="capability-category">{{ item.category }}</span>
+          </div>
+
+          <h3>{{ item.title }}</h3>
+
+          <p class="capability-description">
+            {{ item.description }}
+          </p>
+
+          <ul class="capability-points">
+
+            @for (point of item.points; track point) {
+            <li>
+              <span class="point-check">✓</span>
+              {{ point }}
+            </li>
+            }
+
+          </ul>
+
+          <div class="capability-card-bottom">
+            <span>HHM GLOBAL ACCOUNTING</span>
+            <span class="capability-arrow">→</span>
+          </div>
+
+        </article>
+        }
+
+      </div>
+
+
+      <div class="capabilities-note scroll-reveal">
+        <span class="note-symbol">i</span>
+
+        <p>
+          Services can be arranged individually or combined based on your
+          business requirements, agreed scope, and engagement model.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BUSINESS GROWTH STAGES -->
+  <section class="stages-section section-space">
+    <div class="growth-container">
+
+      <div class="section-heading split-heading scroll-reveal">
+
+        <div>
+          <span class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            SUPPORT THAT ADAPTS
+          </span>
+
+          <h2>
+            Support for every
+            <span>stage of business growth.</span>
+          </h2>
+        </div>
+
+        <p>
+          Your finance requirements today may look different from those
+          you have tomorrow. Our support can be structured around your
+          current operations and reviewed as your business evolves.
+        </p>
+
+      </div>
+
+
+      <div class="stages-layout">
+
+        <div class="stages-intro scroll-reveal">
+
+          <span class="stages-intro-number">01 — 04</span>
+
+          <h3>
+            One business.
+            <span>Different financial needs.</span>
+          </h3>
+
+          <p>
+            Build a support arrangement around the activities that matter
+            most at your current stage.
+          </p>
+
+          <a href="/contact" class="text-link">
+            Discuss your requirements
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <div class="stages-list">
+
+          @for (stage of growthStages; track stage.number) {
+          <article class="stage-row scroll-reveal">
+
+            <div class="stage-marker">
+              <span>{{ stage.number }}</span>
+            </div>
+
+            <div class="stage-content">
+
+              <span class="stage-label">{{ stage.stage }}</span>
+
+              <h3>{{ stage.title }}</h3>
+
+              <p>{{ stage.description }}</p>
+
+              <div class="stage-tags">
+                @for (service of stage.services; track service) {
+                <span>{{ service }}</span>
+                }
+              </div>
+
+            </div>
+
+            <span class="stage-arrow">→</span>
+
+          </article>
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ENGAGEMENT MODELS -->
+  <section class="engagement-section section-space">
+    <div class="growth-container">
+
+      <div class="section-heading centered-heading scroll-reveal">
+
+        <span class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          HOW WE WORK
+          <span class="eyebrow-line"></span>
+        </span>
+
+        <h2>
+          Flexible ways to
+          <span>work with HHM.</span>
+        </h2>
+
+        <p>
+          Choose an engagement structure based on the level of involvement,
+          responsibilities, and type of support your business requires.
+        </p>
+
+      </div>
+
+
+      <div class="engagement-grid">
+
+        @for (model of engagementModels; track model.number) {
+        <article class="engagement-card scroll-reveal" [class.engagement-featured]="model.featured">
+
+          <div class="engagement-card-top">
+            <span class="engagement-number">{{ model.number }}</span>
+
+            @if (model.featured) {
+            <span class="engagement-tag">ONGOING SUPPORT</span>
+            } @else {
+            <span class="engagement-tag">FLEXIBLE MODEL</span>
+            }
+          </div>
+
+          <h3>{{ model.title }}</h3>
+
+          <p>{{ model.description }}</p>
+
+          <div class="engagement-divider"></div>
+
+          <ul>
+            @for (feature of model.features; track feature) {
+            <li>
+              <span>✓</span>
+              {{ feature }}
+            </li>
+            }
+          </ul>
+
+          <a href="/contact" class="engagement-link">
+            Discuss this model
+            <span>→</span>
+          </a>
+
+        </article>
+        }
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DELIVERY PROCESS -->
+  <section class="delivery-section section-space">
+    <div class="growth-container">
+
+      <div class="section-heading split-heading scroll-reveal">
+
+        <div>
+          <span class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            OUR DELIVERY APPROACH
+          </span>
+
+          <h2>
+            Defined workflows.
+            <span>Reviewed deliverables.</span>
+          </h2>
+        </div>
+
+        <p>
+          We follow an agreed delivery structure with defined responsibilities,
+          review stages, and communication. The process is aligned with the
+          scope and requirements of each engagement.
+        </p>
+
+      </div>
+
+
+      <div class="delivery-grid">
+
+        @for (step of deliverySteps; track step.number) {
+        <article class="delivery-card scroll-reveal">
+
+          <span class="delivery-number">{{ step.number }}</span>
+
+          <div class="delivery-connector"></div>
+
+          <h3>{{ step.title }}</h3>
+
+          <p>{{ step.description }}</p>
+
+        </article>
+        }
+
+      </div>
+
+
+      <div class="review-hierarchy scroll-reveal">
+
+        <span class="hierarchy-label">REVIEW HIERARCHY</span>
+
+        <div class="hierarchy-flow">
+          <span>Preparer</span>
+          <span class="hierarchy-arrow">→</span>
+          <span>Reviewer</span>
+          <span class="hierarchy-arrow">→</span>
+          <span>Manager Sign-off</span>
+          <span class="hierarchy-arrow">→</span>
+          <span class="hierarchy-final">Client Delivery</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WHY HHM -->
+  <section class="benefits-section section-space">
+    <div class="growth-container">
+
+      <div class="section-heading centered-heading scroll-reveal">
+
+        <span class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          THE HHM APPROACH
+          <span class="eyebrow-line"></span>
+        </span>
+
+        <h2>
+          Support built around
+          <span>the way your business operates.</span>
+        </h2>
+
+        <p>
+          Our approach focuses on clear responsibilities, structured
+          processes, and support that can be aligned with changing
+          operational requirements.
+        </p>
+
+      </div>
+
+
+      <div class="benefits-grid">
+
+        @for (benefit of benefits; track benefit.number) {
+        <article class="benefit-card scroll-reveal">
+
+          <span class="benefit-number">{{ benefit.number }}</span>
+
+          <h3>{{ benefit.title }}</h3>
+
+          <p>{{ benefit.description }}</p>
+
+          <span class="benefit-line"></span>
+
+        </article>
+        }
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="faq-section section-space" id="faqs">
+    <div class="growth-container faq-layout">
+
+      <div class="faq-intro scroll-reveal">
+
+        <span class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          COMMON QUESTIONS
+        </span>
+
+        <h2>
+          Things you may
+          <span>want to know.</span>
+        </h2>
+
+        <p>
+          Learn more about our business support services, engagement
+          arrangements, and delivery approach.
+        </p>
+
+        <div class="faq-contact">
+          <span>Have a different question?</span>
+
+          <a href="/contact">
+            Talk to our team
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="faq-list scroll-reveal">
+
+        @for (faq of faqs; track faq.question; let i = $index) {
+        <details class="faq-item" [open]="i === 0">
+
+          <summary>
+            <span class="faq-question">{{ faq.question }}</span>
+            <span class="faq-toggle"></span>
+          </summary>
+
+          <div class="faq-answer">
+            <p>{{ faq.answer }}</p>
+          </div>
+
+        </details>
+        }
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="growth-cta-section">
+    <div class="growth-container">
+
+      <div class="growth-cta-content scroll-reveal">
+
+        <span class="section-eyebrow cta-eyebrow">
+          <span class="eyebrow-line"></span>
+          LET'S BUILD THE RIGHT SUPPORT
+        </span>
+
+        <h2>
+          Focus on growing your business.
+          <span>We'll support your financial operations.</span>
+        </h2>
+
+        <p>
+          Tell us about your business, current processes, and the areas
+          where you need support. Let's discuss an arrangement that fits
+          your requirements.
+        </p>
+
+        <div class="cta-actions">
+
+          <a href="/contact" class="growth-btn growth-btn-light">
+            Discuss Your Requirements
+            <span class="btn-arrow">→</span>
+          </a>
+
+          <a href="mailto:info@hhmconsultancyservices.com" class="cta-email">
+            info@hhmconsultancyservices.com
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="cta-decoration" aria-hidden="true">
+        <span class="cta-ring ring-one"></span>
+        <span class="cta-ring ring-two"></span>
+        <span class="cta-ring ring-three"></span>
+        <span class="cta-decoration-text">HHM</span>
+      </div>
+
+    </div>
+  </section>
+
+</main>

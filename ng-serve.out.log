@@ -1,0 +1,57 @@
+
+> hhm-global-accounting@0.0.0 start
+> ng serve --host 127.0.0.1 --port 4200
+
+❯ Building...
+✔ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+main.js              | main             |  23.15 kB | 
+styles.css           | styles           | 269 bytes | 
+
+                     | Initial total    |  23.42 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |  24.37 kB | 
+server.mjs           | server           |   1.86 kB | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Application bundle generation complete. [1.882 seconds] - 2026-08-14T21:05:35.001Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+[2m2:35:35 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+[2m2:35:35 am[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m Re-optimizing dependencies because vite config has changed
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m4200[22m/[39m
+[2m2:35:36 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
+[2m2:35:36 am[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [optimizer] bundling dependencies...
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       | Raw size
+main.js             | main        | 23.03 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       | Raw size
+main.server.mjs     | main.server | 24.25 kB | 
+
+Application bundle generation complete. [0.379 seconds] - 2026-08-14T21:08:52.636Z
+
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       | Raw size
+main.js             | main        | 23.14 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       | Raw size
+main.server.mjs     | main.server | 24.36 kB | 
+
+Application bundle generation complete. [0.258 seconds] - 2026-08-14T21:10:44.060Z
+
+Component update sent to client(s).

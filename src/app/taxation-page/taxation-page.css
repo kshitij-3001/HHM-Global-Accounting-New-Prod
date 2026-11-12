@@ -1,0 +1,577 @@
+/* =========================================================
+   HHM GLOBAL ACCOUNTING — TAXATION PAGE
+   Requires shared services-page.css to be available globally.
+   ========================================================= */
+
+
+/* =========================================================
+   1. TAX PAGE BASE
+   ========================================================= */
+
+.tax-page {
+  --tax-orange: #f16819;
+  --tax-orange-dark: #d9560d;
+  --tax-black: #151515;
+  --tax-dark: #1c1c1c;
+  --tax-text: #292929;
+  --tax-muted: #696969;
+  --tax-light: #f7f7f5;
+  --tax-white: #ffffff;
+  --tax-border: #e7e5e1;
+}
+
+.tax-page .services-breadcrumb {
+  flex-wrap: wrap;
+}
+
+.tax-page .services-hero-description {
+  max-width: 590px;
+}
+
+
+/* =========================================================
+   2. INTRODUCTION
+   ========================================================= */
+
+.tax-intro-section {
+  position: relative;
+}
+
+.tax-intro-section .services-intro-content {
+  max-width: 540px;
+}
+
+
+/* =========================================================
+   3. TAX SERVICES GRID
+   ========================================================= */
+
+.tax-services-section {
+  background: var(--tax-light);
+}
+
+.tax-services-grid .tax-service-card {
+  min-height: 305px;
+}
+
+.tax-service-card .service-card-icon {
+  font-family: inherit;
+}
+
+.tax-service-card h3 {
+  max-width: 350px;
+}
+
+.tax-service-card > p {
+  margin-bottom: 23px;
+}
+
+.tax-service-card .service-card-bottom {
+  justify-content: flex-start;
+}
+
+.tax-service-card .service-card-category {
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   4. TAX WORKFLOW
+   ========================================================= */
+
+.tax-workflow-section {
+  background: var(--tax-white);
+}
+
+.tax-workflow-grid .services-process-step h3 {
+  max-width: 230px;
+}
+
+.tax-workflow-grid .services-process-step > p {
+  max-width: 280px;
+}
+
+
+/* =========================================================
+   5. INTERNATIONAL COVERAGE
+   ========================================================= */
+
+.tax-coverage-section {
+  padding: 100px 0;
+  background: var(--tax-light);
+}
+
+.tax-coverage-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 75px;
+}
+
+.tax-coverage-copy h2 {
+  max-width: 510px;
+  margin: 18px 0 19px;
+  color: var(--tax-black);
+  font-size: clamp(32px, 3.7vw, 45px);
+  line-height: 1.17;
+  letter-spacing: -1.4px;
+}
+
+.tax-coverage-copy h2 span {
+  display: block;
+  color: var(--tax-orange);
+}
+
+.tax-coverage-copy > p {
+  max-width: 470px;
+  margin-bottom: 23px;
+  color: var(--tax-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+/* Coverage panel */
+
+.tax-coverage-panel {
+  min-width: 0;
+  padding: 28px;
+  background: var(--tax-white);
+  border: 1px solid var(--tax-border);
+  border-radius: 5px;
+  box-shadow: 0 14px 38px rgba(20, 20, 20, 0.035);
+}
+
+.tax-coverage-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--tax-border);
+}
+
+.tax-coverage-panel-mark {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  place-items: center;
+  color: var(--tax-white);
+  background: var(--tax-orange);
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.tax-coverage-panel-heading > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tax-coverage-panel-heading strong {
+  color: var(--tax-black);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.tax-coverage-panel-heading > div > span {
+  color: var(--tax-muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+
+/* Country chips */
+
+.tax-country-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 23px 0;
+}
+
+.tax-country-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  min-height: 49px;
+  padding: 11px 12px;
+  background: #faf9f7;
+  border: 1px solid #ebe8e2;
+  border-radius: 3px;
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.tax-country-chip:hover {
+  background: #fff3ec;
+  border-color: #ffd6bf;
+  transform: translateY(-2px);
+}
+
+.tax-country-chip > span {
+  flex: 0 0 auto;
+  color: var(--tax-orange);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.7px;
+}
+
+.tax-country-chip strong {
+  min-width: 0;
+  color: var(--tax-text);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.tax-country-chip-wide {
+  grid-column: 1 / -1;
+}
+
+.tax-coverage-disclaimer {
+  margin: 0;
+  padding: 16px;
+  color: #68615a;
+  background: #fff3ec;
+  border-left: 3px solid var(--tax-orange);
+  border-radius: 2px;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   6. COLLABORATION SECTION
+   ========================================================= */
+
+.tax-collaboration-section {
+  padding: 100px 0;
+  background: var(--tax-white);
+}
+
+.tax-collaboration-section .services-section-heading {
+  margin-bottom: 36px;
+}
+
+.tax-collaboration-section .services-section-heading-copy {
+  max-width: 750px;
+}
+
+.tax-collaboration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tax-collaboration-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 315px;
+  padding: 29px;
+  background: #f8f7f4;
+  border: 1px solid var(--tax-border);
+  border-radius: 5px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.tax-collaboration-card:hover {
+  border-color: rgba(241, 104, 25, 0.5);
+  box-shadow: 0 13px 35px rgba(20, 20, 20, 0.05);
+  transform: translateY(-4px);
+}
+
+.tax-collaboration-card-dark {
+  color: var(--tax-white);
+  background: var(--tax-black);
+  border-color: var(--tax-black);
+}
+
+.tax-collaboration-card-dark:hover {
+  background: #202020;
+  border-color: var(--tax-orange);
+}
+
+.tax-collaboration-number {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  margin-bottom: 26px;
+  place-items: center;
+  color: var(--tax-orange);
+  background: #fff0e7;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.tax-collaboration-card-dark .tax-collaboration-number {
+  color: var(--tax-white);
+  background: var(--tax-orange);
+}
+
+.tax-collaboration-content {
+  flex: 1 1 auto;
+}
+
+.tax-collaboration-label {
+  display: block;
+  margin-bottom: 11px;
+  color: var(--tax-orange);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+  line-height: 1.6;
+}
+
+.tax-collaboration-content h3 {
+  margin-bottom: 13px;
+  color: var(--tax-black);
+  font-size: 23px;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+}
+
+.tax-collaboration-card-dark .tax-collaboration-content h3 {
+  color: var(--tax-white);
+}
+
+.tax-collaboration-content p {
+  max-width: 470px;
+  margin: 0;
+  color: var(--tax-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.tax-collaboration-card-dark .tax-collaboration-content p {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.tax-collaboration-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 25px;
+  padding-top: 17px;
+  color: var(--tax-black) !important;
+  border-top: 1px solid #e3e0d9;
+  font-size: 11px;
+  font-weight: 750;
+  transition: color 0.2s ease;
+}
+
+.tax-collaboration-card-dark .tax-collaboration-link {
+  color: var(--tax-white) !important;
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.tax-collaboration-link span {
+  color: var(--tax-orange);
+  font-size: 19px;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.tax-collaboration-link:hover,
+.tax-collaboration-card-dark .tax-collaboration-link:hover {
+  color: var(--tax-orange) !important;
+}
+
+.tax-collaboration-link:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   7. FINAL CTA
+   ========================================================= */
+
+.tax-cta-section {
+  background: var(--tax-white);
+}
+
+.tax-cta-section .services-cta-content h2 {
+  max-width: 680px;
+}
+
+.tax-cta-section .services-cta-content > p {
+  max-width: 600px;
+}
+
+
+/* =========================================================
+   8. TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .tax-coverage-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 38px;
+  }
+
+  .tax-coverage-panel {
+    padding: 22px;
+  }
+
+  .tax-country-chip {
+    padding: 10px;
+  }
+
+  .tax-collaboration-card {
+    padding: 24px;
+  }
+
+}
+
+
+/* =========================================================
+   9. MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .tax-page .services-hero-copy h1 {
+    max-width: 540px;
+  }
+
+  .tax-page .services-hero-description {
+    font-size: 13px;
+  }
+
+  .tax-intro-section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+
+  /* Service cards */
+
+  .tax-services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tax-services-grid .tax-service-card {
+    min-height: 0;
+  }
+
+
+  /* Workflow */
+
+  .tax-workflow-section {
+    padding-top: 69px;
+    padding-bottom: 73px;
+  }
+
+
+  /* Coverage */
+
+  .tax-coverage-section {
+    padding: 68px 0;
+  }
+
+  .tax-coverage-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .tax-coverage-copy h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .tax-coverage-copy > p {
+    font-size: 12px;
+  }
+
+  .tax-coverage-panel {
+    padding: 19px;
+  }
+
+  .tax-country-grid {
+    gap: 8px;
+  }
+
+  .tax-country-chip {
+    min-height: 48px;
+  }
+
+
+  /* Collaboration */
+
+  .tax-collaboration-section {
+    padding: 69px 0;
+  }
+
+  .tax-collaboration-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .tax-collaboration-card {
+    min-height: 285px;
+    padding: 23px;
+  }
+
+  .tax-collaboration-content h3 {
+    font-size: 21px;
+  }
+
+
+  /* Final CTA */
+
+  .tax-cta-section {
+    padding-bottom: 65px;
+  }
+
+}
+
+
+/* =========================================================
+   10. SMALL MOBILE SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .tax-country-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tax-country-chip-wide {
+    grid-column: auto;
+  }
+
+  .tax-coverage-copy h2 {
+    font-size: 31px;
+  }
+
+  .tax-coverage-panel {
+    padding: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   11. ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tax-page .tax-country-chip,
+  .tax-page .tax-collaboration-card,
+  .tax-page .tax-collaboration-link span {
+    transition-duration: 0.01ms !important;
+  }
+
+}

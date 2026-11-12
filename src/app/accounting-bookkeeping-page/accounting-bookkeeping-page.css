@@ -1,0 +1,326 @@
+/* =========================================================
+   HHM GLOBAL ACCOUNTING — ACCOUNTING & BOOKKEEPING PAGE
+   Extends services.css. This page reuses its shared classes
+   (hero, buttons, cards, models, process, CTA) and only adds
+   the sections below. Keep services.css loaded as well.
+   ========================================================= */
+
+/* The page keeps .services-page so it inherits all tokens.
+   Hero breadcrumb: allow the middle link to look like the first. */
+.ab-page .services-breadcrumb {
+  flex-wrap: wrap;
+}
+
+/* Cards in this page have no per-card link, so no bottom padding gap */
+.ab-page .service-card-bottom {
+  justify-content: flex-start;
+}
+
+
+/* =========================================================
+   INDUSTRIES
+   ========================================================= */
+
+.ab-industries-section {
+  padding: 84px 0;
+  background: var(--services-white);
+}
+
+.ab-industries-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.ab-industries-grid h2 {
+  max-width: 480px;
+  margin: 18px 0 16px;
+  color: var(--services-black);
+  font-size: clamp(31px, 3.5vw, 43px);
+  line-height: 1.19;
+  letter-spacing: -1.3px;
+}
+
+.ab-industries-grid h2 span {
+  display: block;
+  color: var(--services-orange);
+}
+
+.ab-industries-grid p {
+  max-width: 440px;
+  margin: 0;
+  color: var(--services-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ab-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ab-chip-list li {
+  padding: 10px 15px;
+  color: var(--services-text);
+  background: var(--services-light);
+  border: 1px solid var(--services-border);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ab-chip-list li:hover {
+  color: var(--services-orange-dark);
+  background: #fff3ec;
+  border-color: #ffe1d0;
+}
+
+
+/* =========================================================
+   PRICING
+   ========================================================= */
+
+.ab-pricing-section {
+  padding: 100px 0 96px;
+  background: var(--services-light);
+}
+
+.ab-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ab-price-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px;
+  background: var(--services-white);
+  border: 1px solid #eae8e4;
+  border-radius: 5px;
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    transform 0.28s ease;
+}
+
+.ab-price-card:hover {
+  border-color: rgba(241, 104, 25, 0.62);
+  box-shadow: 0 14px 36px rgba(25, 25, 25, 0.055);
+  transform: translateY(-5px);
+}
+
+.ab-price-card-featured {
+  color: var(--services-white);
+  background: #1c1c1c;
+  border-color: #1c1c1c;
+}
+
+.ab-price-label {
+  margin-bottom: 26px;
+  padding-bottom: 16px;
+  color: var(--services-muted);
+  border-bottom: 1px solid var(--services-border);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.ab-price-card-featured .ab-price-label {
+  color: rgba(255, 255, 255, 0.65);
+  border-bottom-color: rgba(255, 255, 255, 0.14);
+}
+
+.ab-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.ab-price strong {
+  color: var(--services-black);
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.ab-price-card-featured .ab-price strong {
+  color: var(--services-white);
+}
+
+.ab-price span {
+  color: var(--services-orange);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ab-price-card > p {
+  margin: 0;
+  color: var(--services-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.ab-price-card-featured > p {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.ab-pricing-note {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 24px 0 0;
+  padding: 18px 22px;
+  color: var(--services-muted);
+  background: #fff3ec;
+  border-left: 3px solid var(--services-orange);
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.ab-pricing-note a {
+  color: var(--services-black) !important;
+  font-weight: 750;
+  text-decoration: underline !important;
+  text-decoration-color: var(--services-orange) !important;
+  text-underline-offset: 4px;
+}
+
+.ab-pricing-note a:hover {
+  color: var(--services-orange) !important;
+}
+
+
+/* =========================================================
+   WHY HHM / BENEFITS
+   ========================================================= */
+
+.ab-benefits-section {
+  padding: 100px 0 40px;
+  background: var(--services-white);
+}
+
+.ab-benefits-section .services-process-header {
+  margin-bottom: 40px;
+}
+
+.ab-benefits-section .services-process-header h2 span {
+  display: block;
+  color: var(--services-orange);
+}
+
+.ab-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ab-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 18px 18px;
+  color: var(--services-black);
+  background: #fff3ec;
+  border: 1px solid #ffe1d0;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.ab-benefit span {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  place-items: center;
+  color: var(--services-white);
+  background: var(--services-orange);
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .ab-industries-grid {
+    gap: 45px;
+  }
+
+  .ab-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ab-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+
+  .ab-industries-section {
+    padding: 62px 0;
+  }
+
+  .ab-industries-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .ab-industries-grid h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .ab-pricing-section {
+    padding: 68px 0 64px;
+  }
+
+  .ab-pricing-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .ab-price-card {
+    padding: 24px;
+  }
+
+  .ab-benefits-section {
+    padding: 69px 0 20px;
+  }
+
+  .ab-benefits-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ab-page .ab-chip-list li,
+  .ab-page .ab-price-card {
+    transition-duration: 0.01ms !important;
+  }
+}
