@@ -296,3 +296,26 @@
   pointer-events: auto;
   transform: translateY(0);
 }
+
+/* FINOPS AI NAVIGATION LINK */
+
+.nav-link[href="/finops-ai"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.nav-link[href="/finops-ai"]::after {
+  content: "↗";
+  color: #f16819;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(-2px);
+  transition: transform 250ms ease;
+}
+
+.nav-link[href="/finops-ai"]:hover::after {
+  transform: translate(2px, -4px);
+}

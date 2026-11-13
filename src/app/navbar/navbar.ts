@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 type NavItem = {
   label: string;
@@ -9,7 +10,7 @@ type NavItem = {
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
@@ -99,11 +100,19 @@ export class Navbar {
           label: 'Testimonials',
           href: '/resources/testimonials',
         },
+        {
+          label: 'Career',
+          href: '/resources/careers',
+        },
       ],
     },
     {
       label: 'FAQ',
       href: '/faq',
+    },
+    {
+      label: 'FinOps AI',
+      href: '/finops-ai',
     },
   ];
 

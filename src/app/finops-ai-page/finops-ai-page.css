@@ -1,0 +1,153 @@
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.finops-page {
+  --orange: #f16819;
+  --black: #171717;
+
+  min-height: 75vh;
+  background: #121212;
+  color: #fff;
+  font-family: inherit;
+}
+
+.finops-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
+  background:
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(241, 104, 25, 0.14),
+      transparent 35%
+    ),
+    #121212;
+}
+
+.finops-container {
+  width: min(1000px, calc(100% - 48px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.finops-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.finops-eyebrow span {
+  font-size: 17px;
+}
+
+.finops-hero h1 {
+  margin: 25px 0;
+  color: #fff;
+  font-size: clamp(46px, 6vw, 70px);
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1.1;
+}
+
+.finops-hero h1 span {
+  display: block;
+  color: var(--orange);
+}
+
+.finops-divider {
+  width: 50px;
+  height: 3px;
+  margin: 30px auto;
+  background: var(--orange);
+}
+
+.finops-description {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #b5b5b5;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.finops-identity {
+  max-width: 440px;
+  margin: 55px auto 35px;
+}
+
+.identity-card {
+  padding: 23px;
+  border: 1px solid #383838;
+  border-radius: 5px;
+  background: #1d1d1d;
+  transition: border-color 250ms ease;
+}
+
+.identity-card:hover {
+  border-color: var(--orange);
+}
+
+.identity-label {
+  color: #999;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.identity-card h2 {
+  margin: 12px 0 0;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.parent-card h2 {
+  color: var(--orange);
+}
+
+.identity-connector {
+  height: 50px;
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+  font-size: 24px;
+}
+
+.finops-coming-soon {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #414141;
+  border-radius: 3px;
+  color: #b5b5b5;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 520px) {
+  .finops-hero {
+    padding: 75px 0;
+  }
+
+  .finops-container {
+    width: calc(100% - 36px);
+  }
+
+  .finops-hero h1 {
+    font-size: 45px;
+  }
+
+  .finops-description {
+    font-size: 13px;
+  }
+
+  .identity-card h2 {
+    font-size: 19px;
+  }
+}
